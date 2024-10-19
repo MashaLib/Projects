@@ -1,4 +1,6 @@
 ﻿
+using System.Text;
+
 namespace LearnLab.NumberOperations
 {
     public class DigitOperations
@@ -40,7 +42,25 @@ namespace LearnLab.NumberOperations
         
         public static string PerformZigzagMerge(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
+            char[] firstDigit = firstNumber.ToString().ToCharArray();
+            char[] secondDigit = secondNumber.ToString().ToCharArray();
+
+            StringBuilder result = new StringBuilder();
+
+            int maxLenght = Math.Max(firstDigit.Length, secondDigit.Length);
+
+            for (int i = 0; i < maxLenght; i++)
+            {
+                if (i < firstDigit.Length)
+                {
+                    result.Append(firstDigit[i]);
+                }
+                if (i < secondDigit.Length)
+                {
+                    result.Append(secondDigit[i]);
+                }
+            }
+            return result.ToString();
         }
 
         public static string SortDigits(int firstNumber, int secondNumber)
