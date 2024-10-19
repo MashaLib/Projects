@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace LearnLab.NumberOperations
 {
     public class DigitOperations
@@ -30,7 +32,18 @@ namespace LearnLab.NumberOperations
 
         public static string FindLeastAndGreatestDigit(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
+            string combinedDigits = (firstNumber < 0 ? -firstNumber : firstNumber).ToString() +
+                        (secondNumber < 0 ? -secondNumber : secondNumber).ToString();
+            int leastDigit = 9;
+            int greatestDigit = 0;
+            foreach (char digitChar in combinedDigits)
+            {
+                int digit = digitChar - '0'; //unicode - 0 (48) to int
+                if (digit < leastDigit) leastDigit = digit;
+                if (digit > greatestDigit) greatestDigit = digit;
+            }
+            return $"Least digit: {leastDigit}, Greatest digit: {greatestDigit}";
+
         }
 
         public static string FindUniqueDigits(int firstNumber, int secondNumber)
