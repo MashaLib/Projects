@@ -31,7 +31,18 @@ namespace LearnLab.NumberOperations
 
         public static string CompareNumbers(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
+            if (firstNumber < secondNumber)
+            {
+                return "less";
+            }
+            else if (firstNumber > secondNumber)
+            {
+                return "greater";
+            }
+            else
+            {
+                return "equal";
+            }
         }
     }
 }
