@@ -14,14 +14,23 @@ namespace LearnLab.NumberOperations
             throw new NotImplementedException();
         }
 
-        public static  string CalculateLCM(int firstNumber, int secondNumber)
+        public static string CalculateLCM(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
+            int gcd = int.Parse(CalculateGCD(firstNumber, secondNumber));
+            int lcm = (Math.Abs(firstNumber * secondNumber) / gcd);
+            return lcm.ToString();
         }
 
         public static  string CalculateGCD(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
+            //euclidian algorithm
+            while (secondNumber != 0)
+            {
+                int temp = secondNumber;
+                secondNumber = firstNumber % secondNumber;
+                firstNumber = temp;
+            }
+            return firstNumber.ToString();
         }
 
         public static string CalculatePercentageRatioOfSum(int firstNumber, int secondNumber)
