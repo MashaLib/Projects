@@ -33,7 +33,7 @@ namespace LearnLab.NumberOperations
         public static string FindLeastAndGreatestDigit(int firstNumber, int secondNumber)
         {
             string combinedDigits = (firstNumber < 0 ? -firstNumber : firstNumber).ToString() +
-                        (secondNumber < 0 ? -secondNumber : secondNumber).ToString();
+                        (secondNumber < 0 ? -secondNumber : secondNumber).ToString(); // checkinmg for  negatives
             int leastDigit = 9;
             int greatestDigit = 0;
             foreach (char digitChar in combinedDigits)
