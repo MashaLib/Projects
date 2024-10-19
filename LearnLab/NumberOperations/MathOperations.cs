@@ -32,7 +32,8 @@ namespace LearnLab.NumberOperations
 
         public static string CalculateMultiplication(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
+            int result = firstNumber * secondNumber;
+            return result.ToString();
         }
 
         public static string CalculatePower(int firstNumber, int secondNumber)
