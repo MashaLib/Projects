@@ -47,13 +47,50 @@ namespace LearnLab.NumberOperations
 
         public static string CheckIfNumbersAreFibonacci(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
-        }
+            
+            
+                
+                bool IsFibonacci(int number)
+                {
+                    bool IsPerfectSquare(int n)
+                    {
+                        int sqrt = (int)Math.Sqrt(n);
+                        return sqrt * sqrt == n;
+                    }
 
-        public static string CheckIfSumIsPrime(int firstNumber, int secondNumber)
-        {
-            throw new NotImplementedException();
+                    return IsPerfectSquare(5 * number * number + 4) || IsPerfectSquare(5 * number * number - 4);
+                }
+
+               
+                bool isFirstFibonacci = IsFibonacci(firstNumber);
+                bool isSecondFibonacci = IsFibonacci(secondNumber);
+
+              
+                if (isFirstFibonacci && isSecondFibonacci)
+                {
+                    return "yes, both numbers";
+                }
+                else if (isFirstFibonacci)
+                {
+                    return "yes, first number";
+                }
+                else if (isSecondFibonacci)
+                {
+                    return "yes, second number";
+                }
+                else
+                {
+                    return "no";
+                }
+            }
         }
 
     }
-}
+
+    //public static string CheckIfSumIsPrime(int firstNumber, int secondNumber)
+    //    {
+    //        throw new NotImplementedException();
+        
+
+    
+
