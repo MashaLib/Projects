@@ -10,7 +10,36 @@ namespace LearnLab.NumberOperations
 
         public static string CheckIfNumbersAreDigitAnagrams(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
+            string result = "NO";
+
+            string firstNumberString = firstNumber.ToString();
+            string secondNumberString = secondNumber.ToString();
+
+            if (firstNumberString.Length != secondNumberString.Length) 
+            {
+                return result;
+            }
+
+            int checkLength = 0;
+            
+            for (int i = 0; i < firstNumberString.Length; i++)
+            {
+                for (int j = 0; j < secondNumberString.Length; j++)
+                {
+                    if (firstNumberString[i] == secondNumberString[j] & checkLength < firstNumberString.Length) 
+                    {
+                        checkLength++;
+                        break;
+                    }
+                }
+            }
+
+            if (checkLength == firstNumberString.Length) 
+            {
+               result = "YES";
+            }
+
+            return result;
         }
 
         public static string CheckIfNumbersAreMirrors(int firstNumber, int secondNumber)
