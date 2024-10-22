@@ -79,5 +79,20 @@ namespace LearnLab.UnitTests
             // Assert
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void CalculateSubtraction_ReturnsCorrectResultAsString_ForNegativeNumbers()
+        {
+            // Arrange
+            int firstNumber = -10;
+            int secondNumber = -3;
+            string expected = "-7";
+
+            // Act
+            string result = MathOperations.CalculateSubtraction(firstNumber, secondNumber);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
     }
 }
