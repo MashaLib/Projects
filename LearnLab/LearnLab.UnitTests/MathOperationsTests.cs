@@ -1,4 +1,5 @@
 using LearnLab.NumberOperations;
+using System.ComponentModel;
 
 namespace LearnLab.UnitTests
 {
@@ -125,6 +126,19 @@ namespace LearnLab.UnitTests
             Assert.AreEqual(expected, result);
         }
 
+        [TestMethod]
+        public void CalculateSubtraction_ReturnsCorrectResultAsString_ForNegativeAndPositiveNumbers()
+        {
+            // Arrange
+            int firstNumber = -5;
+            int secondNumber = 7;
+            string expected = "-12";
 
+            // Act
+            string result = MathOperations.CalculateSubtraction(firstNumber, secondNumber);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
     }
 }
