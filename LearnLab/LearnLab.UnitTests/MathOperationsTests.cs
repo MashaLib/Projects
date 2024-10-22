@@ -94,5 +94,20 @@ namespace LearnLab.UnitTests
             // Assert
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void CalculateSubtraction_ReturnsCorrectResultAsString_ForSubtractionZeros()
+        {
+            // Arrange
+            int firstNumber = 0;
+            int secondNumber = 0;
+            string expected = "0";
+
+            // Act
+            string result = MathOperations.CalculateSubtraction(firstNumber, secondNumber);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
     }
 }
