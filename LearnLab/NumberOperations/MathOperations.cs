@@ -3,7 +3,7 @@ namespace LearnLab.NumberOperations
 {
     public class MathOperations
     {
-        
+
         public static string CalculateAddition(int firstNumber, int secondNumber)
         {
             int result = firstNumber + secondNumber;
@@ -24,7 +24,7 @@ namespace LearnLab.NumberOperations
         {
             throw new NotImplementedException();
         }
-        
+
         public static string CalculateFactorialOfSum(int firstNumber, int secondNumber)
         {
             throw new NotImplementedException();
@@ -52,9 +52,26 @@ namespace LearnLab.NumberOperations
 
         public static string CheckIfSumIsPrime(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
-            //test test
+            int uresult = firstNumber + secondNumber;
+            if (uresult == 0 || uresult == 1)
+            {
+                Console.WriteLine(uresult + " is not a prime number!");
+                Console.ReadLine();
+            }
+            else
+            {
+                for (int i = 2; i <= uresult / 2; i++)
+                {
+                    if (uresult % i == 0)
+                    {
+                        Console.WriteLine(uresult + " is not a prime number");
+                        Console.ReadLine();
+                        return uresult.ToString();
+                    }
+                }
+                Console.WriteLine(uresult + " is a prime number!");
+            }
+            return uresult.ToString();
         }
-
     }
 }
