@@ -36,12 +36,6 @@ namespace LearnLab.NumberOperations
                             .ToString()               
                             .Select(x => (int)char.GetNumericValue(x)) 
                             .ToArray();           
-
-            //if (number < 0)
-            //{
-            //    digits[0] = -digits[0];
-            //}
-
             return digits;
         }
 
