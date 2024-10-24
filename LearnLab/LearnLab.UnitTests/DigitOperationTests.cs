@@ -19,6 +19,6 @@ namespace LearnLab.UnitTests
 
             // Assert
             Assert.AreEqual(expected, result);
-        }
+        }        
     }
 }

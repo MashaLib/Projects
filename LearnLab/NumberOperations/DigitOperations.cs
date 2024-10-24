@@ -7,6 +7,19 @@ namespace LearnLab.NumberOperations
         {
             // The sum of the digits of both {firstNumber} and {secondNumber} together is:
 
+            string result = string.Empty;
+
+            if(firstNumber > 0 & secondNumber > 0)
+            {
+                result = CalculateSumOfPositiveDigits(firstNumber, secondNumber);
+            }
+
+            return result;
+        }
+
+        public static string CalculateSumOfPositiveDigits(int firstNumber, int secondNumber)
+        {
+
             int[] digits = firstNumber.ToString()
                     .Select(x => int.Parse(x.ToString()))
                     .Concat(secondNumber.ToString()
