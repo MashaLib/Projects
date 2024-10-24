@@ -69,7 +69,7 @@ namespace LearnLab.NumberOperations
                         return uresult.ToString();
                     }
                 }
-                Console.WriteLine(uresult + " is a prime number!");
+                Console.WriteLine(uresult + " is a prime number!!");
             }
             return uresult.ToString();
         }
