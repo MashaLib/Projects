@@ -1,39 +1,48 @@
 ﻿
+using System.Numerics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace LearnLab.NumberOperations
 {
     public class DigitOperations
     {
+      
         public static string CalculateSumOfDigits(int firstNumber, int secondNumber)
         {
             // The sum of the digits of both {firstNumber} and {secondNumber} together is:
 
-            string result = string.Empty;
+            int[] firstDigits = SplitNumberIntoIntArray(firstNumber);
+            int[] secondDigits = SplitNumberIntoIntArray(secondNumber);
 
-            if(firstNumber > 0 & secondNumber > 0)
-            {
-                result = CalculateSumOfPositiveDigits(firstNumber, secondNumber);
-            }
-
-            return result;
-        }
-
-        public static string CalculateSumOfPositiveDigits(int firstNumber, int secondNumber)
-        {
-
-            int[] digits = firstNumber.ToString()
-                    .Select(x => int.Parse(x.ToString()))
-                    .Concat(secondNumber.ToString()
-                                .Select(x => int.Parse(x.ToString())))
-                    .ToArray();
 
             int sum = 0;
 
-            for (int i = 0; i < digits.Length; i++)
+            for (int i = 0; i < firstDigits.Length; i++)
             {
-                sum += digits[i];
+                sum += firstDigits[i];
+            }
+
+            for (int i = 0; i < secondDigits.Length; i++)
+            {
+                sum += secondDigits[i];
             }
 
             return sum.ToString();
+        }
+
+        public static int[] SplitNumberIntoIntArray(int number)
+        {
+            int[] digits = Math.Abs(number)
+                            .ToString()               
+                            .Select(x => (int)char.GetNumericValue(x)) 
+                            .ToArray();           
+
+            if (number < 0)
+            {
+                digits[0] = -digits[0];
+            }
+
+            return digits;
         }
 
         public static string CheckIfNumbersAreDigitAnagrams(int firstNumber, int secondNumber)
