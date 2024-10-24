@@ -19,6 +19,21 @@ namespace LearnLab.UnitTests
 
             // Assert
             Assert.AreEqual(expected, result);
-        }        
+        }
+
+        [TestMethod]
+        public void CalculateSumOfDigits_ReturnsStringOfSumOfDigits_ForTwoNegativeNumbers()
+        {
+            // Arrange
+            int firstNumber = -78;
+            int secondNumber = -89;
+            string expected = "2";
+
+            // Act
+            string result = DigitOperations.CalculateSumOfDigits(firstNumber, secondNumber);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
     }
 }
