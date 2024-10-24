@@ -53,6 +53,7 @@ namespace LearnLab.NumberOperations
         public static string CheckIfSumIsPrime(int firstNumber, int secondNumber)
         {
             throw new NotImplementedException();
+            //test test
         }
 
     }
