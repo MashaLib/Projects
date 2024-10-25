@@ -11,11 +11,18 @@ namespace LearnLab.NumberOperations
         {
             // The sum of the digits of both {firstNumber} and {secondNumber} together is:
 
+            int sum = 0;
+
+            Math.Abs(firstNumber);
+            Math.Abs(secondNumber);
+
+            if ((firstNumber < 10 & firstNumber >= 0) & (secondNumber < 10 & secondNumber >= 0))
+            {
+                sum = firstNumber + secondNumber;    
+            }
+
             int[] firstDigits = SplitNumberIntoIntArray(firstNumber);
             int[] secondDigits = SplitNumberIntoIntArray(secondNumber);
-
-
-            int sum = 0;
 
             for (int i = 0; i < firstDigits.Length; i++)
             {
