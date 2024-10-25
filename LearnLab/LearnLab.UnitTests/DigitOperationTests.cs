@@ -50,5 +50,19 @@ namespace LearnLab.UnitTests
             // Assert
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void SplitNumberIntoIntArray_ReturnArrayOfInt_ForPositveNumber() 
+        {
+            // Arrange
+            int number = 123;
+            int[] expected = { 1, 2, 3 };
+
+            // Act
+            int[] result = DigitOperations.SplitNumberIntoIntArray(number);
+
+            // Assert
+            CollectionAssert.AreEqual(expected, result);    
+        }
     }
 }
