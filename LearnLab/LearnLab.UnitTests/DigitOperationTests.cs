@@ -52,7 +52,7 @@ namespace LearnLab.UnitTests
         }
 
         [TestMethod]
-        public void SplitNumberIntoIntArray_ReturnArrayOfInt_ForPositveNumber() 
+        public void SplitNumberIntoIntArray_ReturnIntArray_ForPositveNumber() 
         {
             // Arrange
             int number = 123;
@@ -63,6 +63,22 @@ namespace LearnLab.UnitTests
 
             // Assert
             CollectionAssert.AreEqual(expected, result);    
+            CollectionAssert.AreEquivalent(expected, result);
+        }
+
+        [TestMethod]
+        public void SplitNumberIntoIntArray_ReturnPositiveIntsArray_ForNegativeNumber()
+        {
+            // Arrange
+            int number = -123;
+            int[] expected = { 1, 2, 3 };
+
+            // Act
+            int[] resutl = DigitOperations.SplitNumberIntoIntArray(number);
+
+            // Assert
+            CollectionAssert.AreEqual(expected, resutl);
+            CollectionAssert.AreEquivalent(expected, resutl);
         }
     }
 }
