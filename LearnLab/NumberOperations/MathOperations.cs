@@ -3,7 +3,7 @@ namespace LearnLab.NumberOperations
 {
     public class MathOperations
     {
-        
+
         public static string CalculateAddition(int firstNumber, int secondNumber)
         {
             int result = firstNumber + secondNumber;
@@ -24,7 +24,7 @@ namespace LearnLab.NumberOperations
         {
             throw new NotImplementedException();
         }
-        
+
         public static string CalculateFactorialOfSum(int firstNumber, int secondNumber)
         {
             throw new NotImplementedException();
@@ -69,6 +69,7 @@ namespace LearnLab.NumberOperations
         }
        static bool IsFibonacci(int number)
         {
+
             if (number < 0) return false;
             return IsPerfectSquare(5 * number * number + 4) || IsPerfectSquare(5 * number * number - 4);
         }
@@ -80,11 +81,7 @@ namespace LearnLab.NumberOperations
         }   
                 
                
-            
-        }
-
-    }
-
+      
     //public static string CheckIfSumIsPrime(int firstNumber, int secondNumber)
     //    {
     //        throw new NotImplementedException();
