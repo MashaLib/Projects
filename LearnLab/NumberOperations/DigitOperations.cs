@@ -15,10 +15,31 @@ namespace LearnLab.NumberOperations
 
         public static string CheckIfNumbersAreMirrors(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
-        }
+            string firstNumberStr = firstNumber.ToString();
+            string secondNumberStr = secondNumber.ToString();
 
-        public static string CountDigits(int firstNumber, int secondNumber)
+
+            char[] firstNumberCharArray = firstNumberStr.ToCharArray();
+            Array.Reverse(firstNumberCharArray);
+            string reversedFirstNumber = new string(firstNumberCharArray);
+
+
+            if (reversedFirstNumber == secondNumberStr)
+            {
+                return "Yes";
+            }
+            else
+            {
+
+                return "No";
+
+            }
+        }
+        
+    
+
+
+           public static string CountDigits(int firstNumber, int secondNumber)
         {
             throw new NotImplementedException();
         }
