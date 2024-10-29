@@ -1,4 +1,5 @@
 using LearnLab.NumberOperations;
+using System.ComponentModel;
 
 namespace LearnLab.UnitTests
 {
@@ -60,6 +61,81 @@ namespace LearnLab.UnitTests
 
             // Act
             string result = MathOperations.CalculateAddition(firstNumber, secondNumber);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void CalculateSubtraction_ReturnsCorrectResultAsString_ForPositiveNumbers()
+        {
+            // Arrange
+            int firstNumber = 10;
+            int secondNumber = 3;
+            string expected = "7";
+
+            // Act
+            string result = MathOperations.CalculateSubtraction(firstNumber, secondNumber);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void CalculateSubtraction_ReturnsCorrectResultAsString_ForNegativeNumbers()
+        {
+            // Arrange
+            int firstNumber = -10;
+            int secondNumber = -3;
+            string expected = "-7";
+
+            // Act
+            string result = MathOperations.CalculateSubtraction(firstNumber, secondNumber);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void CalculateSubtraction_ReturnsCorrectResultAsString_ForSubtractionZeros()
+        {
+            // Arrange
+            int firstNumber = 0;
+            int secondNumber = 0;
+            string expected = "0";
+
+            // Act
+            string result = MathOperations.CalculateSubtraction(firstNumber, secondNumber);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void CalculateSubtraction_ReturnsCorrectResultAsString_ForPositiveAndNegativeNumbers()
+        {
+            // Arrange
+            int firstNumber = 5;
+            int secondNumber = -7;
+            string expected = "12";
+
+            // Act
+            string result = MathOperations.CalculateSubtraction(firstNumber, secondNumber);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void CalculateSubtraction_ReturnsCorrectResultAsString_ForNegativeAndPositiveNumbers()
+        {
+            // Arrange
+            int firstNumber = -5;
+            int secondNumber = 7;
+            string expected = "-12";
+
+            // Act
+            string result = MathOperations.CalculateSubtraction(firstNumber, secondNumber);
 
             // Assert
             Assert.AreEqual(expected, result);
