@@ -45,7 +45,11 @@ namespace LearnLab.NumberOperations
 
         public static string SortDigits(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
+            string combinedDigits = (firstNumber < 0 ? -firstNumber : firstNumber).ToString() +
+                         (secondNumber < 0 ? -secondNumber : secondNumber).ToString();
+            char[] digitsArray = combinedDigits.ToCharArray();
+            Array.Sort(digitsArray);
+            return string.Concat(digitsArray);
         }
       
     }
