@@ -42,7 +42,8 @@ namespace LearnLab.NumberOperations
 
         public static string CalculateSubtraction(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
+            int result = firstNumber + secondNumber;
+            return result.ToString();
         }
 
         public static string CheckIfNumbersAreFibonacci(int firstNumber, int secondNumber)
