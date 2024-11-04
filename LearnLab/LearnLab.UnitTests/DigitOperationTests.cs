@@ -7,12 +7,12 @@ namespace LearnLab.UnitTests
     public class DigitOperationTests
     {
         [TestMethod]
-        public void FindCommonDigits_ReturnsCommonDigitsOfTwoNumbersAsString()
+        public void FindCommonDigits_ReturnsResultAsString_ForCommonDigits()
         {
             // Arrange
-            int firstNumber = 1223;
-            int secondNumber = 4232;
-            string expected = "2, 3";
+            int firstNumber = 12345;
+            int secondNumber = 54321;
+            string expected = "1, 2, 3, 4, 5";
 
             // Act
             string result = DigitOperations.FindCommonDigits(firstNumber, secondNumber);
