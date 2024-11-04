@@ -80,5 +80,20 @@ namespace LearnLab.UnitTests
             CollectionAssert.AreEqual(expected, resutl);
             CollectionAssert.AreEquivalent(expected, resutl);
         }
+
+        [TestMethod]
+        public void SplitNumberIntoIntArray_ReturnPositiveIntsArray_ForSingleNumber()
+        {
+            // Arrange
+            int number = 1;
+            int[] expected = { 1 };
+
+            // Act
+            int[] result = DigitOperations.SplitNumberIntoIntArray(number);
+
+            // Assert
+            CollectionAssert.AreEquivalent (expected, result);
+            CollectionAssert.AreEqual (expected, result);
+        }
     }
 }
