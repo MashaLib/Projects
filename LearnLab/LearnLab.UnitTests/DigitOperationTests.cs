@@ -7,9 +7,65 @@ namespace LearnLab.UnitTests
     public class DigitOperationTests
     {
         [TestMethod]
-        public void MyTestMethod()
+        public void CheckIfNumbersAreDigitAnagrams_ForSameNumbers()
         {
+            // Arrange
+            int firstNumber = 123;
+            int secondNumber = 123;
+            string expected = "YES";
 
+            // Act
+            string result = DigitOperations.CheckIfNumbersAreDigitAnagrams(firstNumber, secondNumber);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void CheckIfNumbersAreDigitAnagrams_ForDifferentDigits()
+        {
+            int firstNumber = 123;
+            int secondNumber = 567;
+            string expected = "NO";
+
+            string result = DigitOperations.CheckIfNumbersAreDigitAnagrams(firstNumber, secondNumber);
+
+            Assert.AreEqual(expected, result);
+        }
+        [TestMethod]
+        public void CheckIfNumbersAreDigitAnagrams_ForSameDigitsInDifferentOrder()
+        {
+            int firstNumber = 123;
+            int secondNumber = 321;
+            string expected = "YES";
+
+            string result = DigitOperations.CheckIfNumbersAreDigitAnagrams(firstNumber, secondNumber);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void CheckIfNumbersAreDigitAnagrams_ForNumbersWithDifferentLengths()
+        {
+            int firstNumber = 123;
+            int secondNumber = 1233;
+            string expected = "NO";
+
+            string result = DigitOperations.CheckIfNumbersAreDigitAnagrams(firstNumber, secondNumber);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void CheckIfNumbersAreDigitAnagrams_ForDuplicateDigitsInDifferentOrders()
+        {
+            int firstNumber = 1223;
+            int secondNumber = 3221;
+            string expected = "YES";
+
+            string result = DigitOperations.CheckIfNumbersAreDigitAnagrams(firstNumber, secondNumber);
+
+            Assert.AreEqual(expected, result);
         }
     }
 }
