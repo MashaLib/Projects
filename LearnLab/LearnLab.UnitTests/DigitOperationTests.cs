@@ -55,5 +55,17 @@ namespace LearnLab.UnitTests
 
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void CheckIfNumbersAreDigitAnagrams_ForDuplicateDigitsInDifferentOrders()
+        {
+            int firstNumber = 1223;
+            int secondNumber = 3221;
+            string expected = "YES";
+
+            string result = DigitOperations.CheckIfNumbersAreDigitAnagrams(firstNumber, secondNumber);
+
+            Assert.AreEqual(expected, result);
+        }
     }
 }
