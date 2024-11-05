@@ -50,5 +50,20 @@ namespace LearnLab.UnitTests
             // Assert
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void FindCommonDigits_ReturnsResultAsString_ForRepeatedDigitsInEachNumber()
+        {
+            // Arrange
+            int firstNumber = 112233;
+            int secondNumber = 233445;
+            string expected = "2, 3";
+
+            // Act
+            string result = DigitOperations.FindCommonDigits(firstNumber, secondNumber);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
     }
 }
