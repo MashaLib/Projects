@@ -68,7 +68,7 @@ namespace LearnLab.UnitTests
 
         {
             //Arrange
-            int firstNumber = 123;
+            int firstNumber = -123;
             int secondNumber = 321;
 
             //Act
@@ -90,7 +90,7 @@ namespace LearnLab.UnitTests
 
             //Act
 
-            string result = DigitOperations.CheckIfNumbersAreDigitAnagrams(firstNumber, secondNumber);
+            string result = DigitOperations.CheckIfNumbersAreMirrors(firstNumber, secondNumber);
 
             //Assert
 
