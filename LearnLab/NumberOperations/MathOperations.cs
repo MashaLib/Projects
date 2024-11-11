@@ -47,31 +47,45 @@ namespace LearnLab.NumberOperations
 
         public static string CheckIfNumbersAreFibonacci(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
-        }
+            bool IsFirstFibonacci = IsFibonacci(firstNumber);
+            bool IsSecondFibonacci = IsFibonacci(secondNumber);
 
-        public static string CheckIfSumIsPrime(int firstNumber, int secondNumber)
-        {
-            int uresult = firstNumber + secondNumber;
-            if (uresult == 0 || uresult == 1)
+            if (IsFirstFibonacci && IsSecondFibonacci)
             {
-                Console.WriteLine(uresult + " is not a prime number!");
-                Console.ReadLine();
+                return "yes, both numbers";
+            }
+            else if (IsFirstFibonacci)
+            {
+                return "yes, first number";
+            }
+            else if (IsSecondFibonacci)
+            {
+                return "yes, second number";
             }
             else
             {
-                for (int i = 2; i <= uresult / 2; i++)
-                {
-                    if (uresult % i == 0)
-                    {
-                        Console.WriteLine(uresult + " is not a prime number");
-                        Console.ReadLine();
-                        return uresult.ToString();
-                    }
-                }
-                Console.WriteLine(uresult + " is a prime number!!");
+                return "no";
             }
-            return uresult.ToString();
         }
-    }
-}
+       static bool IsFibonacci(int number)
+        {
+
+            if (number < 0) return false;
+            return IsPerfectSquare(5 * number * number + 4) || IsPerfectSquare(5 * number * number - 4);
+        }
+       static bool IsPerfectSquare(int x)
+        {
+            int s = (int)Math.Sqrt(x);
+            return (s * s == x);
+
+        }   
+                
+               
+      
+    //public static string CheckIfSumIsPrime(int firstNumber, int secondNumber)
+    //    {
+    //        throw new NotImplementedException();
+        
+
+    
+

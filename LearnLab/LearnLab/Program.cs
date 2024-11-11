@@ -93,9 +93,9 @@ namespace LearnLab
                     case OperationOptionsEnum.CheckIfNumberIsFibonacci:
                         Console.WriteLine($"Are {firstNumber} or {secondNumber} Fibonacci numbers? {MathOperations.CheckIfNumbersAreFibonacci(firstNumber, secondNumber)}");
                         break;
-                    case OperationOptionsEnum.CheckIfSumIsPrime:
-                        Console.WriteLine($"Is the sum of {firstNumber} and {secondNumber} a prime number? {MathOperations.CheckIfSumIsPrime(firstNumber, secondNumber)}");
-                        break;
+                    //case OperationOptionsEnum.CheckIfSumIsPrime:
+                    //    Console.WriteLine($"Is the sum of {firstNumber} and {secondNumber} a prime number? {MathOperations.CheckIfSumIsPrime(firstNumber, secondNumber)}");
+                    //    break;
                     case OperationOptionsEnum.FindSumOfDigits:
                         Console.WriteLine($"The sum of the digits of both {firstNumber} and {secondNumber} together is: {DigitOperations.CalculateSumOfDigits(firstNumber, secondNumber)}");
                         break;
