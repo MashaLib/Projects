@@ -20,7 +20,10 @@ namespace LearnLab.NumberOperations
 
         public static string CountDigits(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
+            int firstNumberDigits = firstNumber.ToString().Length;
+            int secondNumberDigits = secondNumber.ToString().Length;
+            int totalDigits = firstNumberDigits + secondNumberDigits;
+            return totalDigits.ToString();
         }
         
         public static string FindCommonDigits(int firstNumber, int secondNumber)
