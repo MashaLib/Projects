@@ -35,7 +35,26 @@ namespace LearnLab.NumberOperations
 
         public static string FindUniqueDigits(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
+            char[] firstDigit = firstNumber.ToString().ToCharArray();
+            char[] secondDigit = secondNumber.ToString().ToCharArray();
+
+            HashSet<char> uniqueDigits = new HashSet<char>();
+
+            foreach (char c in firstDigit)
+            {
+                if (!secondDigit.Contains(c))
+                {
+                    uniqueDigits.Add(c);
+                }
+            }
+            foreach (char c in secondDigit)
+            {
+                if (!firstDigit.Contains(c))
+                {
+                    uniqueDigits.Add(c);
+                }
+            }
+            return new string(uniqueDigits.ToArray());
         }
         
         public static string PerformZigzagMerge(int firstNumber, int secondNumber)
