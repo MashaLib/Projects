@@ -17,7 +17,15 @@ namespace LearnLab.NumberOperations
 
         public static string CalculateDivision(int firstNumber, int secondNumber)
         {
-            throw new NotImplementedException();
+            if (secondNumber != 0)
+            {
+                int result = firstNumber / secondNumber;
+                return result.ToString();
+            }
+            else
+            {
+                return "Division by zero is not allowed";
+            }
         }
 
         public static string CalculateDivisionWithRemainder(int firstNumber, int secondNumber)
